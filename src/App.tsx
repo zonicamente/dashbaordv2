@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import Sidebar from './components/Sidebar/Sidebar';
+import Reloj from './components/Reloj/Reloj'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Fase01 from './pages/Fase01';
+import Fase02 from './pages/Fase02';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    return (
+        <Router>
+            <div className="App">
+                <Sidebar />
+                <div className="reloj">
+                <Reloj />
+                </div>
+                <div className="content">
+                    <Routes>
+                        <Route path='/' element={<Fase01 />} />
+                        <Route path='/f02' element={<Fase02 />} />
+                    </Routes>
+                </div>
+            </div>
+        </Router>
+    );
+};
 
 export default App;

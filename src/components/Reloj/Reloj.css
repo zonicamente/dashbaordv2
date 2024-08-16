@@ -1,0 +1,35 @@
+.clock {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .clock h1 {
+    font-size: 2em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .clock p {
+    font-size: 2.2em;
+    margin: 0;
+  }
+  
+  .time-info {
+    margin-left: 10px; 
+    display: inline; 
+  }
+  
+  .time-info h2, .time-info h4 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Si quieres que el tamaño del texto sea más uniforme */
+  .time-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .time-info h4 {
+    font-size: 1rem;
+  }
